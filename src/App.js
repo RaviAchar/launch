@@ -16,15 +16,31 @@ import CustomerService from './components/Account/CustomerService';
 import Profile from './components/Account/Profile';
 import Checkout from './components/basket/Checkout';
 import Accounts from './components/Account/Accounts';
+import Privacy from './Privacy';
+import TermsOfUse from './TermsOfUse';
+import Tab from './Tab';
+import TabConfig from './TabConfig';
+import TeamsScheduler from './teamspages/TeamsScheduler';
+import TeamsEvent from './teamspages/TeamsEvent';
+import TeamsTabMain from './teamspages/TeamsTabMain';
+
+
 
 function App() {
+  console.log(window.location.pathname.startsWith("/teamstab"))
   return (
+
     <div className="App">
-      <MainBar />
+      {window.location.pathname.startsWith("/teamstab") !== true && <MainBar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-
+        <Route path="/teamstab/privacy" element={<Privacy />} />
+        <Route path="/teamstab/termsofuse" element={<TermsOfUse />} />
+        <Route path="/teamstab/tab" element={<Tab />} />
+        <Route path="/teamstab/config" element={<TabConfig />} />
+        <Route path="/teamstab/teamsevent" element={<TeamsTabMain compName="EVENT" />} />
+        <Route path="/teamstab/schedule" element={<TeamsTabMain compName="SCHEDULE" heduler />} />
         <Route path="/brands" element={<Brands />} />
         <Route path="/products" element={<Inventory />} />
         <Route path="/events" element={<Events />} />
