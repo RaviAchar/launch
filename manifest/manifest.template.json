@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.15",
+  "version": "1.2.0",
+  "id": "b4f5290e-61fe-496b-b6bc-6837cdc5b445",
+  "packageName": "Launch Event",
+  "developer": {
+    "name": "Launch Event",
+    "websiteUrl": "https://applaunch.azurewebsites.net/",
+    "privacyUrl": "https://applaunch.azurewebsites.net/privacy",
+    "termsOfUseUrl": "https://applaunch.azurewebsites.net/termsofuse"
+  },
+  "icons": {
+      "color": "pfalcon.jpg",
+      "outline": "pfalcon.jpg"
+  },
+  "name": {
+    "short": "Launch Event",
+    "full": "Event Launching App."
+  },
+  "description": {
+    "short": "Sample Real-time Payments app using Open Banking APIs.",
+    "full": "Simple app to demonstrate deploying real-time payment using Microsoft Teams. It can be used as a Virtual Pos & Vendor index Payment Systems"
+  },
+  "accentColor": "#1e0692",
+
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://applaunch.azurewebsites.net/config",
+      "scopes": [
+        "team",
+        "groupchat"
+      ],
+      "canUpdateConfiguration": true,
+      "context": [
+        "channelTab",
+        "privateChatTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "meetingStage"
+      ]
+    }
+  ],
+
+
+  "staticTabs": [
+    {
+      "entityId": "Index",
+      "name": "Launch Event Home",
+      "contentUrl": "https://applaunch.azurewebsites.net/events",
+      "websiteUrl": "https://applaunch.azurewebsites.net/events",
+      "scopes": [
+        "personal",
+        "team"
+      ]
+    },
+    {
+      "entityId": "rtpTxn",
+      "name": "Real-time Payments",
+      "contentUrl": "https://applaunch.azurewebsites.net/index.html",
+      "websiteUrl": "https://applaunch.azurewebsites.net/index.html",
+      "scopes": [
+        "personal",
+        "team"
+      ]
+    },
+    {
+      "entityId": "GenInv",
+      "name": "Generate Invoice",
+      "contentUrl": "https://applaunch.azurewebsites.net/index.html",
+      "websiteUrl": "https://applaunch.azurewebsites.net/index.html",
+      "scopes": [
+        "personal"
+      ]
+    }
+
+  ],
+  "showLoadingIndicator": false,
+  "permissions": [
+      "identity",
+      "messageTeamMembers"
+  ],
+  "validDomains": [
+      "applaunch.azurewebsites.net"
+  ]
+}
