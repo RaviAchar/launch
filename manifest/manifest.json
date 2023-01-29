@@ -83,5 +83,9 @@
   ],
   "validDomains": [
       "applaunch.azurewebsites.net"
-  ]
+  ],
+  "webApplicationInfo": {
+      "id": "433348a6-7475-48e7-bcb3-33557fae36e2",
+      "resource": "api://applaunch.azurewebsites.net/433348a6-7475-48e7-bcb3-33557fae36e2"
+    }
 }
